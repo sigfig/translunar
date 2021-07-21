@@ -1,0 +1,102 @@
+/*******************************************************************************/
+/* global rules                                                                */
+
+body {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0;
+    padding: 0;
+    
+    background-color: #999;
+}
+
+/*******************************************************************************/
+/* navigation header                                                           */
+
+nav {
+    display: flex;
+    flex-direction:row;
+    
+    background-color: #333;
+    
+    padding: 8px 8px;
+}
+
+nav div.path {
+    padding: 8px;
+    font-size: large;
+}
+
+nav div.path a {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+    color: #FFF;
+}
+
+nav div.path.separator {
+    font-size: larger;
+}
+
+nav div.path.home {}
+
+nav div.path.element {
+    color: #CCC;
+}
+
+/*******************************************************************************/
+/* article layout                                                              */
+
+article {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #FFF;
+    
+    margin: 32px 15%;
+    min-width: 750px;
+    
+    padding: 32px;
+}
+
+/*******************************************************************************/
+/* content rules                                                               */
+
+p.Title {
+    display: flex;
+    font-size: xxx-large;
+    
+    margin: 0.7em 0;
+}
+
+p.Subtitle {
+    display: inline-flex;
+    font-size: xx-large;
+    
+    margin: 0.5em 0;
+}
+
+p.Text {
+    margin: 1em;
+}
+
+p.Text span {
+    
+}
+
+/*******************************************************************************/
+/* footer layout                                                               */
+
+footer {
+    background: #333;
+    padding: 16px;
+    
+    color: #FFF;
+}
+
+footer a {
+    color: white;
+}
