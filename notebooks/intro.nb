@@ -1,0 +1,263 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11303,        255]
+NotebookOptionsPosition[      9417,        218]
+NotebookOutlinePosition[      9822,        234]
+CellTagsIndexPosition[      9779,        231]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["building a lunar city", "Title",
+ CellChangeTimes->{{3.835814313766863*^9, 3.835814322306982*^9}, {
+  3.835814520120442*^9, 
+  3.835814523582437*^9}},ExpressionUUID->"74fa2353-4f08-44db-b9f2-\
+b679f95caa18"],
+
+Cell["\<\
+this era of spaceflight is one of rapid expansion in infrastructure, launch \
+capacity, and accessibility of satellite and mission design. getting a \
+payload into a space has become an option for small companies and sometimes \
+individual people. access to the internet is delivered by megaconstellations \
+and manned missions to mars now seem feasible. primary launch vehicles have \
+become so reliable we think of vehicle failure as unusual. hundreds of new \
+organizations have formed attempting to push launch capacity and satellite \
+design even further. our cambrian period.\
+\>", "Text",
+ CellChangeTimes->{{3.835814457857984*^9, 3.8358144591754837`*^9}, {
+  3.835814494530093*^9, 3.835814566014686*^9}, {3.835814647763001*^9, 
+  3.835814766621481*^9}, {3.835814924891872*^9, 3.835814990906787*^9}, {
+  3.8358151178027554`*^9, 3.835815201030156*^9}, {3.835815331228352*^9, 
+  3.8358153529370813`*^9}},ExpressionUUID->"867ca351-7858-48f7-9276-\
+f20eadba08aa"],
+
+Cell[TextData[{
+ "the ",
+ StyleBox["next",
+  FontSlant->"Italic"],
+ " era of spaceflight needs a direction. we have to ask the question, what do \
+we ",
+ StyleBox["do",
+  FontSlant->"Italic"],
+ " with all these resources and capabilities? there are a thousand concepts \
+for manned missions to the moon and mars, concepts for surface settlements, \
+vague ideas for how to build large habitats in orbit. a few of these have \
+cohered into focused projects, but all this work is limited in scope and \
+caught up in the organizational concerns of active space programs. we may \
+sinter together a village, leave footprints on mars, but then what?"
+}], "Text",
+ CellChangeTimes->{{3.8358147697327147`*^9, 3.8358147788108892`*^9}, {
+  3.8358148239570103`*^9, 3.8358148439416227`*^9}, {3.8358148926626*^9, 
+  3.835814920040196*^9}, {3.8358150026655827`*^9, 3.8358150312039127`*^9}, {
+  3.835815104977542*^9, 3.83581510916746*^9}, {3.835815203147558*^9, 
+  3.835815320184903*^9}, {3.835815377147073*^9, 3.8358153961439867`*^9}, {
+  3.835815439483625*^9, 3.835815534613599*^9}, {3.835815576964529*^9, 
+  3.8358155991701107`*^9}, {3.835815856418583*^9, 
+  3.8358158700035067`*^9}},ExpressionUUID->"bf3fa96e-c0e6-43a7-a09c-\
+9d439ace1e20"],
+
+Cell["\<\
+we are attempting to assemble a strongly focused direction for spaceflight in \
+the long term. over the next 100 years: we will build a city on the moon. not \
+a tourist destination, nor a scientific installation, but a thriving society \
+with all the ups and downs of life. by the end of this period, in the 2120s, \
+we aim to have created a settlement in which people are born, live, and die.\
+\>", "Text",
+ CellChangeTimes->{{3.8358155398129787`*^9, 3.835815561850767*^9}, {
+  3.835815621771682*^9, 3.835815672632135*^9}, {3.835815778017929*^9, 
+  3.835815806737678*^9}, {3.835816055721158*^9, 3.835816074347547*^9}, {
+  3.8358161122335987`*^9, 3.835816231941848*^9}, {3.8358162965359087`*^9, 
+  3.8358163190766697`*^9}, {3.8358167205777197`*^9, 
+  3.835816725526497*^9}},ExpressionUUID->"002bf234-6eb2-4740-a6ff-\
+9e30035520ef"],
+
+Cell["\<\
+this goal is currently impossible. payload delivery to the lunar surface is \
+extremely limited, environmental factors of the lunar surface pose severe \
+risks to human habitation, and there is no clear path to creating a \
+self-sustaining closed ecology. it is our responsibility to contend with \
+these problems, and make it possible.\
+\>", "Text",
+ CellChangeTimes->{{3.835817895149774*^9, 3.835817982998538*^9}, {
+  3.835818018968498*^9, 3.8358180906819773`*^9}, {3.835818617157196*^9, 
+  3.835818617539261*^9}},ExpressionUUID->"3b04280a-c840-4b47-a7e7-\
+7e8facba334e"],
+
+Cell[CellGroupData[{
+
+Cell["the project", "Subtitle",
+ CellChangeTimes->{{3.835816281779945*^9, 3.83581628370805*^9}, {
+  3.835816474758086*^9, 
+  3.8358164759397383`*^9}},ExpressionUUID->"2593c5d3-0556-42b1-be5e-\
+e8f60658904c"],
+
+Cell["this is the very beginning of this project.", "Text",
+ CellChangeTimes->{{3.8358177480392323`*^9, 
+  3.835817767433958*^9}},ExpressionUUID->"c2ae0aeb-ed71-4111-af25-\
+224709fe2596"],
+
+Cell["\<\
+currently, this website serves as a collection of conceptual explorations for \
+ways we can achieve this goal. it is a repository for sketches of launch \
+vehicles, spacecraft, mission design, analysis of human settlement, and the \
+occasional philosophizing.\
+\>", "Text",
+ CellChangeTimes->{{3.835816493125787*^9, 3.835816683554411*^9}, {
+   3.835816770295608*^9, 3.8358171867627277`*^9}, {3.835817278693953*^9, 
+   3.835817295411394*^9}, {3.835817424214588*^9, 3.835817425426929*^9}, 
+   3.835817836689*^9},ExpressionUUID->"d0a43363-3b63-46bb-9259-25a39e052a0d"],
+
+Cell["\<\
+in many ways this project is naive! we have no concrete plans, just an \
+arbitrary goal, and we are stabbing in the dark at what a plan could look \
+like. we follow child-like imagination of a beautiful life on another planet, \
+fantastic spacecraft to carry us through the stars, then we shatter those \
+dreams with the cold skepticism of engineering analysis. we believe the \
+shards of those dreams are the best building materials for assembling real \
+missions for such a difficult task.\
+\>", "Text",
+ CellChangeTimes->{{3.835816493125787*^9, 3.835816683554411*^9}, {
+   3.835816770295608*^9, 3.8358171867627277`*^9}, {3.835817278693953*^9, 
+   3.835817295411394*^9}, {3.835817424214588*^9, 3.835817425426929*^9}, 
+   3.835817838478689*^9},ExpressionUUID->"72f0e11c-f517-410f-8879-\
+94a85c220b71"],
+
+Cell["\<\
+as we develop, we hope to spin off practical research and business projects \
+following the work done here. the purpose of this website is to render plans \
+for our members to follow in engineering work, incrementally advancing \
+towards our goal.\
+\>", "Text",
+ CellChangeTimes->{{3.835818110736348*^9, 3.835818151731659*^9}, {
+  3.835818187600994*^9, 3.8358182903361464`*^9}, {3.835818579093718*^9, 
+  3.835818586406878*^9}},ExpressionUUID->"3cc95fed-0542-400e-ae68-\
+81d6ad665bf6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["our community", "Subtitle",
+ CellChangeTimes->{{3.835817313739333*^9, 
+  3.8358173157031393`*^9}},ExpressionUUID->"c9cc1695-97e4-41be-a955-\
+ef4019333b5b"],
+
+Cell["\<\
+this project is open to everyone, from all backgrounds. the hope is to \
+assemble of a community of contributors exploring many different ideas and \
+possible futures, which can then be woven together into actionable plans.\
+\>", "Text",
+ CellChangeTimes->{{3.835817230276115*^9, 3.835817236454238*^9}, {
+  3.835817324216434*^9, 3.83581736165012*^9}, {3.835817435896388*^9, 
+  3.8358175546545277`*^9}, {3.8358175887887983`*^9, 3.83581759210677*^9}, {
+  3.8358176330984793`*^9, 3.835817696861988*^9}, {3.835817771091638*^9, 
+  3.8358178271437798`*^9}, {3.835818328345868*^9, 
+  3.835818330372327*^9}},ExpressionUUID->"00cda95b-bb55-4487-ad86-\
+bdfae7886edb"],
+
+Cell[TextData[{
+ "to learn more about what we're doing, and how to contribute, please read \
+the ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    TemplateBox[{"\"guide\"", "https://translunar.space/meta/guide.html"},
+     "HyperlinkURL"], "Input"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "11c0798a-90de-4dae-8d6e-e7dc35d2fd6f"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.835817230276115*^9, 3.835817236454238*^9}, {
+   3.835817324216434*^9, 3.83581736165012*^9}, {3.835817435896388*^9, 
+   3.8358175546545277`*^9}, {3.8358175887887983`*^9, 3.83581759210677*^9}, {
+   3.8358176330984793`*^9, 3.835817696861988*^9}, {3.835817771091638*^9, 
+   3.835817829394685*^9}, 
+   3.83581835016901*^9},ExpressionUUID->"a505530a-7c25-4a77-b40e-\
+6da518624899"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["starting points", "Subtitle",
+ CellChangeTimes->{{3.835818356365069*^9, 
+  3.835818357725602*^9}},ExpressionUUID->"93114b4b-3556-4653-b10b-\
+f7df269c9e55"],
+
+Cell["\<\
+we\[CloseCurlyQuote]ve chosen to organize the initial explorations as a \
+series of \[OpenCurlyDoubleQuote]mission \
+architectures\[CloseCurlyDoubleQuote]. these are really vague sketches of \
+possible futures, slowly being filled in with concepts.\
+\>", "Text",
+ CellChangeTimes->{{3.8358183641083107`*^9, 3.835818443801639*^9}, 
+   3.835818635089815*^9},ExpressionUUID->"3940a83c-4a05-474d-97a3-\
+24238cd9bf1c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "\"architecture/pylae\"", {"architecture/pylae/overview.html", None}, 
+   "architecture/pylae/overview.html"},
+  "HyperlinkDefault"]], "Input",
+ CellChangeTimes->{{3.835818640960491*^9, 3.835818707335096*^9}, {
+   3.8358203768976727`*^9, 3.835820404793109*^9}, 
+   3.835820694887236*^9},ExpressionUUID->"4853993f-7890-4420-a5b0-\
+4c72830fef04"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{606., 683.25},
+WindowMargins->{{Automatic, 254.625}, {85.5, Automatic}},
+FrontEndVersion->"12.2 for Linux x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2f8d2d38-8dbe-4544-bfc7-ace8e411d655"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 213, 4, 83, "Title",ExpressionUUID->"74fa2353-4f08-44db-b9f2-b679f95caa18"],
+Cell[796, 28, 976, 15, 147, "Text",ExpressionUUID->"867ca351-7858-48f7-9276-f20eadba08aa"],
+Cell[1775, 45, 1229, 23, 127, "Text",ExpressionUUID->"bf3fa96e-c0e6-43a7-a09c-9d439ace1e20"],
+Cell[3007, 70, 842, 13, 107, "Text",ExpressionUUID->"002bf234-6eb2-4740-a6ff-9e30035520ef"],
+Cell[3852, 85, 583, 10, 88, "Text",ExpressionUUID->"3b04280a-c840-4b47-a7e7-7e8facba334e"],
+Cell[CellGroupData[{
+Cell[4460, 99, 207, 4, 45, "Subtitle",ExpressionUUID->"2593c5d3-0556-42b1-be5e-e8f60658904c"],
+Cell[4670, 105, 187, 3, 29, "Text",ExpressionUUID->"c2ae0aeb-ed71-4111-af25-224709fe2596"],
+Cell[4860, 110, 575, 9, 68, "Text",ExpressionUUID->"d0a43363-3b63-46bb-9259-25a39e052a0d"],
+Cell[5438, 121, 812, 13, 127, "Text",ExpressionUUID->"72f0e11c-f517-410f-8879-94a85c220b71"],
+Cell[6253, 136, 494, 9, 68, "Text",ExpressionUUID->"3cc95fed-0542-400e-ae68-81d6ad665bf6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6784, 150, 161, 3, 45, "Subtitle",ExpressionUUID->"c9cc1695-97e4-41be-a955-ef4019333b5b"],
+Cell[6948, 155, 667, 11, 68, "Text",ExpressionUUID->"00cda95b-bb55-4487-ad86-bdfae7886edb"],
+Cell[7618, 168, 769, 18, 29, "Text",ExpressionUUID->"a505530a-7c25-4a77-b40e-6da518624899"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8424, 191, 161, 3, 45, "Subtitle",ExpressionUUID->"93114b4b-3556-4653-b10b-f7df269c9e55"],
+Cell[8588, 196, 423, 8, 49, "Text",ExpressionUUID->"3940a83c-4a05-474d-97a3-24238cd9bf1c"],
+Cell[9014, 206, 375, 8, 26, "Input",ExpressionUUID->"4853993f-7890-4420-a5b0-4c72830fef04"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
