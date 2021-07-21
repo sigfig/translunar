@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="mathematica-notebook.css" type="text/css" media="screen" />
+        <title><wolfram:slot id="title" /></title>
+    </head>
+    <body>
+        <nav>
+            <div class="path home">
+                <a href="/">translunar</a>
+            </div>
+            <wolfram:slot id="path" />
+        </nav>
+        <article class="content">
+            <wolfram:sequence values="#content" slot="cell">
+                <wolfram:slot id="cell" />
+            </wolfram:sequence>
+        </article>
+        <footer>
+            You can edit this document on <wolfram:slot id="github" />. It is freely available for reproduction, modification, whatever you so please.
+        </footer>
+    </body>
+</html>
