@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>translunar space article template</title>
+        <link rel="stylesheet" href="sample.css" type="text/css" media="screen" />
+    </head>
+    <body>
+        <header>
+            <div class="breadcrumb">
+                <span class="root">translunar</span>
+                <span class="spacer">/</span>
+                <span class="directory">articles</span>
+                <span class="spacer">/</span>
+                <span class="page">template</span>
+            </div>
+            <div class="options">
+                <span class="view"><a href="/">view on github</a></span>
+                <span class="download"><a href="/">download notebook</a></span>
+            </div>
+        </header>
+        <main>
+        <nav>
+            <div class="section">
+                <a href="#1">intro</a>
+            </div>
+            <div class="section">
+                <a href="#2">typesetting</a>
+                <div class="subsection">
+                    <a href="#2-1">formulas</a>
+                </div>
+                <div class="subsection">
+                    <a href="#2-1">code</a>
+                </div>
+            </div>
+            <div class="section">
+                <a href="#3">layout</a>
+                <div class="subsection">
+                    <a href="#3-1">heirarchies</a>
+                </div>
+                <div class="subsection">
+                    <a href="#3-2">figures</a>
+                </div>
+                <div class="subsection">
+                    <a href="#3-3">quotes</a>
+                </div>
+                <div class="subsection">
+                    <a href="#3-4">footnotes</a>
+                </div>
+            </div>
+        </nav>
+        <article>
+            <section class="title">
+                <span>translunar article template</span>
+            </section>
+            <section class="block" id="1">
+                <div class="text">
+                    <span>this is a design template for the translunar notebook publishing format. it covers all the kinds of embedded and generated content we want to support.</span>
+                </div>
+                <div class="text">
+                    <span>notebooks are divided into heirarchies of blocks (corresponding to mathematica groups). the first level of blocks is visually distinguished, the others are only represented by indentation.</span>
+                </div>
+            </section>
+            <section class="block" id="2">
+                <div class="heading">
+                    <span>typesetting</span>
+                </div>
+                <div class="text">
+                    <span>the normal stuff, <a href="/">inline links</a>, <span class="bold">text</span> <span class="italic">decorations</span>, etc. notebooks often include mathematical typesetting in inline and block forms, as well as heirarchical lists. we avoid any client-side rendering of mathematical content, so they're included as svgs.</span>
+                </div>
+                <div class="subblock" id="2-1">
+                    <div class="subheading">
+                        <span>formulas</span>
+                    </div>
+                    <div class="text">
+                        <span>formulas can be given in block form:</span>
+                    </div>
+                    <div class="formula">
+                        <img src="./eq1.svg"/>
+                    </div>
+                    <div class="text">
+                        <span>optionally numbered:</span>
+                    </div>
+                    <div class="formula numbered">
+                        <span class="number">1.1</span>
+                        <img src="./eq2.svg"/>
+                    </div>
+                    <div class="text">
+                        <span>and included inline in text eg <img class="formula inline" src="./inline1.svg"/>. inline markup is assumed to follow typographical conventions so it's not too tall.</span>
+                    </div>
+                </div>
+                <div class="subblock" id="2-2">
+                    <div class="subheading">
+                        <span>code</span>
+                    </div>
+                    <div class="text">
+                        <span>the notebooks use an input/output cell model for representing code. one input cell may have multiple output cells. since it is common to use nonlinear layouts in mathematica, input code and output values are also provided as svgs.</span>
+                    </div>
+                    <div class="cell">
+                        <div class="input">
+                            <img src="./input1.svg"/>
+                        </div>
+                        <div class="output">
+                            <img src="./output1.svg"/>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span>output cells can include complex graphics objects, given as pngs</span>
+                    </div>
+                    <div class="cell">
+                        <div class="input">
+                            <img src="./input2.svg"/>
+                        </div>
+                        <div class="output">
+                            <img src="./output2.png"/>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span>often we want to include non-notebook code snippets and inline code. code is given as text for now, eg <span class="code inline">Integrate[Sin[x], x]</span>. code sections can be in a variety of languages and may include multiple snippets.
+                    </div>
+                    <div class="code fortran">
+                        <pre>
+type :: matrix(m, n)
+  integer, len         :: m, n
+  real, dimension(m,n) :: dataa
+end type
+                        </pre>
+                        <pre>
+function ex() returns(first)
+  matrix(4,4) :: matrix
+  real        :: first
+
+  first = matrix%data(1,1)
+end function
+                        </pre>
+                    </div>
+                </div>
+            </section>
+            <section class="block" id="3">
+                <div class="heading">
+                    <span>layout</span>
+                </div>
+                <div class="text">
+                    <span>articles and notebooks can include heirarchical lists of arbitrary depth, as well as footnotes and quotes.</span>
+                </div>
+                <div class="subblock" id="3-1">
+                    <div class="subheading">
+                        <span>heirarchies</span>
+                    </div>
+                    <div class="text">
+                        <span>we use heirarchical lists a lot, and some of them get pretty large and/or deep.</span>
+                    </div>
+                    <div class="heirarchy">
+                        <ul>
+                            <li>this is a bulleted list</li>
+                            <ul>
+                                <li>with some nested content</li>
+                                <li>list elements may include inline code or inline formulas, but they never include images</li>
+                                <li>we use figures (see below) for lists of images</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="heirarchy">
+                        <ol>
+                            <li>this is a numbered list</li>
+                            <li>list elements get pretty deep in some cases</li>
+                            <ol>
+                                <li>two levels</li>
+                                <ol>
+                                    <li>three levels</li>
+                                    <li>at this point we might want them to be foldable idk</li>
+                                    <ol>
+                                        <li>four levels</li>
+                                        <li>need to use css counters so the ordinals aren't nonsense</li>
+                                        <ol>
+                                            <li>five levels</li>
+                                        </ol>
+                                    </ol>
+                                </ol>
+                            </ol>
+                        </ol>
+                    </div>
+                </div>
+                <div class="subblock" id="3-2">
+                    <div class="subheading">
+                        <span>figures</span>
+                    </div>
+                    <div class="text">
+                        <span>because this is an academic publishing format, we also want to include grids of figures in a responsive list, along with explanation text.</span>
+                    </div>
+                    <div class="figures">
+                        <div class="figure">
+                            <img src="figure1.png"/>
+                            <span class="context">plot of x^2 + y^2</span>
+                        </div>
+                        <div class="figure">
+                            <img src="figure2.png"/>
+                            <span class="context">plot of x^3 + y^3</span>
+                        </div>
+                        <div class="figure">
+                            <img src="figure3.png"/>
+                            <span class="context">plot of x^4 + y^4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="subblock" id="3-3">
+                    <div class="subheading">
+                        <span>quotes</span>
+                    </div>
+                    <div class="text">
+                        <span>quotes are just texts along with a citation/context block</span>
+                    </div>
+                    <div class="quote">
+                        <span class="text"> In the words of Kronecker, the positive integers were created by God. Kronecker would have expressed it even better if he had said that the positive integers were created by God for the benefit of man (and other finite beings). Mathematics belongs to man, not to God.</span>
+                        <span class="context">- errot bishop's constructive analysis</span>
+                    </div>
+                </div>
+                <div class="subblock" id="3-4">
+                    <div class="subheading">
+                        <span>footnotes</span>
+                    </div>
+                    <div class="text">
+                        <span>footnotes and citations are placed between the first level of blocks when appropriate. note markers are given as numbers <a class="inline cite" href="#cite-1">[1]</a> and citations are given as author-date pairs <a class="inline cite" href="#cite-2">[sig21]</a></span>
+                    </div>
+                </div>
+            </section>
+            <section class="footnotes">
+                <div class="note" id="cite-1">
+                    <span>[1]:</span>
+                    <span>arbitrary text footnote</span>
+                </div>
+                <div class="note" id="cite-2">
+                    <span>[sig21]:</span>
+                    <span>fake citation, sig selene, 2021</span>
+                </div>
+            </section>
+        </article>
+        </main>
+        <footer>
+            <div class="copyright">
+                2021 © translunar research
+            </div>
+            <div class="explainer">
+                <a href="/">what is translunar research?</a>
+            </div>
+        </footer>
+    </body>
+</html>
