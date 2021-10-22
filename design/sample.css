@@ -1,8 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+@import url('https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css');
+
 /********************************************************************************/
 /* reset                                                                        */
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-    margin: 0;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/********************************************************************************/
+/* variables                                                                    */
+
+:root {
+    --text: #111;
+    --background: #fefefe;
+    --subblock: #eee;
+    --subblock-darker: #ddd;
+    --accent: #bfe0fd;
+    --heading: "Jost", sans-serif;
+    --body: "Computer Modern Serif", serif;
 }
 
 /********************************************************************************/
@@ -21,15 +77,30 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    background-color: black;
-
+    border-bottom: 1px solid var(--subblock);
+    font-family: var(--heading);
     height: 3em;
 }
 
 header .breadcrumb {
-    color: white;
     margin-left: 1em;
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: start;
+        padding-left: 1em;
+        padding-bottom: 2em;
+        padding-top: 1em;
+        position: sticky;
+        background: var(--background);
+        top: 0;
+    }
+    header .breadcrumb {
+        margin-left: 0;
+        padding-bottom: 2em;
+    }
 }
 
 header .breadcrumb .root {}
@@ -37,12 +108,10 @@ header .breadcrumb .directory {}
 header .breadcrumb .article {}
 header .breadcrumb .spacer {}
 
-header .options {
-    margin-right: 1em;
-}
-
 header .options a {
-    color: white;
+    color: var(--text);
+    text-decoration: none;
+    margin-right: 1em;
 }
 
 /********************************************************************************/
@@ -51,7 +120,8 @@ header .options a {
 main {
     display: flex;
     flex-direction: row;
-    background-color: blue;
+    background-color: var(--background);
+    margin-top: 4rem;
 }
 
 @media only screen and (min-width: 1400px) {
@@ -59,6 +129,7 @@ main {
         display: flex;
         flex-direction: column;
         width: 200px;
+        position: absolute;
     }
 }
 
@@ -69,17 +140,24 @@ main {
 }
 
 nav a {
-    color: white;
+    color: var(--text);
+    font-family: var(--body);
+    text-decoration: none;
+    border-bottom: 1px solid var(--text);
+    line-height: 1.5;
+}
+
+nav a:hover {
+    background-color: var(--accent);
 }
 
 nav .section {
     margin-left: 1.5em;
-    padding: 0.5em;
+    padding: 0.25em 0;
 }
 
 nav .section .subsection {
     margin-left: 1em;
-    padding: 0.5em;
 }
 
 /********************************************************************************/
@@ -89,31 +167,55 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: var(--body);
+    max-width: 48em;
+    margin: 0 auto;
+    line-height: 1.5;
+    min-width: 0;
+}
+
+@media only screen and (max-width: 1400px) {
+    article {
+        padding: 0 2em;
+    }
 }
 
 article section {}
 
 article section.title {
     margin: 1em;
-
+    width: 100%;
     font-size: 2.5em;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    font-weight: 500;
+    font-family: var(--heading);
+}
 
-    color: white;
+article section.title:first-of-type {
+    margin: 0;
 }
 
 article section.block {
     margin: 1.5em;
     padding: 1.5em;
-
-    max-width: 1200px;
-
-    background-color: white;
+    max-width: 48em;
+    width: 100%;
+    background-color: var(--background);
 }
 
 article section.block .subblock {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    border-left: 1px solid var(--subblock);
+    padding-left: 2.5em;
+    margin-top: 2em;
+}
+
+article section.block .subblock:hover {
+    border-left: 4px solid var(--subblock);
+    padding-left: calc(2.5em - 3px);
 }
 
 /********************************************************************************/
@@ -123,13 +225,13 @@ section.footnotes {
     display: flex;
     flex-direction: column;
     align-items: left;
-
-    max-width: 1200px;
+    max-width: 48em;
+    width: 100%;
     padding-bottom: 2em;
 }
 
 section.footnotes .note {
-    color: white;
+    color: var(--text);
     margin: 0.5em;
 }
 
@@ -139,30 +241,43 @@ section.footnotes .note {
 .heading {
     padding: 0.5em;
     margin-bottom: 1em;
-
-    border-left: 2px solid blue;
-    border-bottom: 2px solid blue;
-
+    font-family: var(--heading);
+    border-left: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
     font-size: 2em;
+    font-weight: 500;
+    letter-spacing: -0.005em;
 }
 
 .subheading {
     padding: 0.5em;
     margin: 1em 0;
-    margin-left: 1em;
-
-    border-left: 1px solid blue;
-    border-bottom: 1px solid blue;
-
+    font-family: var(--heading);
+    border-left: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
     font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: -0.005em;
 }
 
 .text {
     margin: 0.5em 0;
+    font-size: 1.15em;
+}
+
+.text a, a.inline {
+    text-decoration: none;
+    background-color: var(--accent);
+    padding: 2px;
+    color: var(--text);
+}
+
+.text a:hover, a.inline:hover {
+    border-bottom: 1px solid var(--text);
 }
 
 .formula {
-    margin: 0 1em;
+    margin: 2em 0;
     align-self: center;
 
     display: flex;
@@ -188,12 +303,13 @@ section.footnotes .note {
     display: flex;
     flex-direction: column;
     margin: 2em;
-    border: 2px solid black;
+    border-left: 1px solid var(--subblock-darker);
+    border-bottom: 1px solid var(--subblock-darker);
 }
 
 .cell .input {
     padding: 1em;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--subblock-darker);
 }
 
 .cell .output {
@@ -209,15 +325,18 @@ section.footnotes .note {
 .code {
     margin: 2em;
     padding: 1em;
-    border: 2px solid black;
+    font-family: monospace;
+    background-color: var(--subblock);
+    border-left: 1px solid var(--subblock-darker);
+    border-bottom: 1px solid var(--subblock-darker);
 }
 
 .inline.code {
     margin: 0;
-    padding: 0;
+    padding: 5px;
     border: none;
     font-family: monospace;
-    background-color: gray;
+    background-color: var(--subblock);
 }
 
 .figures {
@@ -231,7 +350,7 @@ section.footnotes .note {
     flex-direction: column;
     align-items: center;
     min-width: 200px;
-    max-width: 500px;
+    max-width: 250px;
     padding: 2em;
 }
 
@@ -248,7 +367,7 @@ section.footnotes .note {
 
 .quote .text {
     padding-left: 1em;
-    border-left: 2px solid blue;
+    border-left: 1px solid var(--subblock-darker);
 }
 .quote .context {
     padding-left: 1.5em;
@@ -262,30 +381,36 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    background-color: black;
+    border-top: 1px solid var(--subblock);
     height: 3em;
+    font-family: var(--heading);
 }
 
 footer .copyright {
-    color: white;
+    color: var(--text);
     margin-left: 1em;
 }
 
 footer .explainer a {
-    color: white;
+    color: var(--text);
     margin-right: 1em;
 }
 
 /********************************************************************************/
 /* list heirarchy                                                               */
 
-.heirarchy > ol {
-    padding-left: 0;
+.heirarchy ol {
+    padding-left: 20px;
+    font-size: 1.15rem;
 }
 
-.heirarchy > ul {
+.heirarchy ul {
     padding-left: 20px;
+    font-size: 1.15rem;
+}
+
+ul {
+    list-style-type: circle;
 }
 
 ol {
