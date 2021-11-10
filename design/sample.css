@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
-@import url('https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
 
 /********************************************************************************/
 /* reset                                                                        */
@@ -58,7 +58,7 @@ table {
     --subblock-darker: #ddd;
     --accent: #bfe0fd;
     --heading: "Jost", sans-serif;
-    --body: "Computer Modern Serif", serif;
+    --body: "Carrois Gothic", sans-serif;
 }
 
 /********************************************************************************/
@@ -78,7 +78,7 @@ header {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--subblock);
-    font-family: var(--heading);
+    font-family: var(--body);
     height: 3em;
 }
 
@@ -383,7 +383,7 @@ footer {
     justify-content: space-between;
     border-top: 1px solid var(--subblock);
     height: 3em;
-    font-family: var(--heading);
+    font-family: var(--body);
 }
 
 footer .copyright {
